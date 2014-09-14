@@ -18,7 +18,7 @@ $ gem install NYTimesAPI
 
 ## Usage
 
-### Real State API
+#### Real State API
 
 First initialize the object, using your api key:
 
@@ -26,16 +26,28 @@ First initialize the object, using your api key:
 ny = NYTimesAPI::RealState.new "myawesomapikey"
 ```
 
-###### Count
+###### Counts
 
 ```ruby
-result = ny.count "Manhattan", {date: "2007-07", bedrooms: 2, type: 3}
+result = ny.counts "Manhattan", {date: "2007-07", bedrooms: 2, type: 3}
 ```
 
 ###### Percentiles
 
 ```ruby
-result = ny.percentile "Manhattan", {date: "2007-07", bedrooms: 2, type: 3}
+result = ny.percentiles "Manhattan", {date: "2007-07", bedrooms: 2, type: 3}
+```
+
+###### Sales Counts
+
+```ruby
+result = ny.sales_counts "Manhattan", {date: "2007-07", bedrooms: 2, type: 3}
+```
+
+###### Sales Percentiles
+
+```ruby
+result = ny.sales_percentiles "Manhattan", {date: "2007-07", bedrooms: 2, type: 3}
 ```
 
 ## Author
